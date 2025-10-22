@@ -4,7 +4,7 @@
 **WebSec Helper** is a lightweight, privacy-friendly Chrome extension that gives you **real-time security hints** for any webpage you visit.  
 It checks for HTTPS, secure cookies, and mixed-content issues — helping users stay aware of their browser security at a glance.
 
----
+
 
 ## Features
 
@@ -14,20 +14,20 @@ It checks for HTTPS, secure cookies, and mixed-content issues — helping users 
 - Detects **mixed content** (insecure resources on HTTPS pages)  
 - Displays **friendly hints** to help users understand risks  
 
----
+
 
 ## How to Install & Test Locally
 
 1. **Download or clone this repository**
-   bash
+```bash
    git clone https://github.com/alistairgeorge/websec-helper.git
-`
+```
 
 2. Open Chrome and go to:
 
-   
+   ```
    chrome://extensions/
-   
+   ```
 
 3. Turn on **Developer mode** (top right).
 
@@ -37,11 +37,11 @@ It checks for HTTPS, secure cookies, and mixed-content issues — helping users 
 
 6. Visit different websites and click the icon to see security hints in action.
 
----
+
 
 ## Folder Structure
 
-
+```
 websec-helper/
 │
 ├── manifest.json          # Extension configuration
@@ -53,13 +53,11 @@ websec-helper/
     ├── lock16.png
     ├── lock48.png
     └── lock128.png
-
-
----
+```
 
 ## manifest.json (configuration example)
 
-json
+```json
 {
   "manifest_version": 3,
   "name": "WebSec Helper",
@@ -83,7 +81,7 @@ json
     "service_worker": "background.js"
   }
 }
-
+```
 
 ## Icon Design
 
@@ -91,17 +89,17 @@ The WebSec Helper icons are minimal padlocks representing web safety and privacy
 They are resized versions of a clean flat-design lock:
 
 | Size    | Use                    | Icon                          |
-| ------- | ---------------------- | ----------------------------- |
+| - | - | -- |
 | 16×16   | Toolbar icon           | ![16x16](icons/lock16.png)    |
 | 48×48   | Extensions menu        | ![48x48](icons/lock48.png)    |
 | 128×128 | Store listing / README | ![128x128](icons/lock128.png) |
 
----
+
 
 ## Test Scenarios
 
 | Website                                 | Expected Result                      |
-| --------------------------------------- | ------------------------------------ |
+|                                         |                                      |
 | `https://google.com`                    |  HTTPS detected — secure connection  |
 | `http://example.com`                    |  Warning — insecure (HTTP) page      |
 | `https://example.com/mixed.html`        |  Mixed content warning               |
@@ -132,4 +130,5 @@ If you’d like to contribute new checks or UI improvements:
 
 This project is open source under the **MIT License**.
 You are free to use, modify, and distribute it with attribution.
+
 
